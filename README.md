@@ -41,7 +41,11 @@ git clone https://github.com/crimson-tea/PuyoQueSolver.git
 ### コマンドを利用して起動
 `PuyoQueSolver.csproj`が存在するディレクトリへ移動し、
 ```
-dotnet run --project .\PuyoQueSolver\PuyoQueSolver\PuyoQueSolver.csproj --configuration Release
+cd .\PuyoQueSolver\PuyoQueSolver\
+```
+Release ビルドコマンド
+```
+dotnet run --configuration Release
 ```
 を実行してください。
 
