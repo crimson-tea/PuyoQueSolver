@@ -18,7 +18,7 @@
 * AVX2 の利用が可能な CPU
 
 ## 使用言語、フレームワーク
-* C# + WinForms
+* C# .NET 6.0 + WinForms
 
 ## 使い方
 ### 事前準備
