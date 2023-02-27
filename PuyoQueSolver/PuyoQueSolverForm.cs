@@ -44,34 +44,14 @@ namespace PuyoQueSolver
             ComboTextBox.Text = combo.ToString();
             DelPuyosCountTextBox.Text = delCount.ToString();
 
-            var combination = ToCombinationArray(combinationBit);
+            var combination = PuyoQueBitBoard.ToCombinationArray(combinationBit);
             BoardPictureBox.Image = FillDeletePuyoImage(combination);
 
             Debug.WriteLine($"コンボ: {combo}");
             Debug.WriteLine($"消えたぷよの数: {delCount}");
         }
 
-        private static int[] ToCombinationArray(ulong combinationBit)
-        {
-            Debug.WriteLine($"combBit: {Convert.ToString((long)combinationBit, 2)}");
-            var count = BitOperations.PopCount(combinationBit);
-            var res = new int[count];
-
-            for (int i = 0; i < count; i++)
-            {
-                int index = BitOperations.TrailingZeroCount(combinationBit);
-                res[i] = index - 8;
-
-                if (res[i] < 0)
-                {
-                    throw new Exception();
-                }
-                combinationBit ^= 1UL << index;
-            }
-
-            return res;
-        }
-
+        // Disposeしない。
         private readonly Brush[] _brushes = new Brush[] { Brushes.White, Brushes.Red, Brushes.Blue, Brushes.Green, Brushes.Orange, Brushes.Purple, Brushes.Pink, Brushes.DarkGray };
 
         private static Bitmap FillDeletePuyoImage(int[] combination)

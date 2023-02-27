@@ -482,6 +482,26 @@ namespace PuyoQueSolver
             return array;
         }
 
+        public static int[] ToCombinationArray(ulong combinationBit)
+        {
+            var count = BitOperations.PopCount(combinationBit);
+            var res = new int[count];
+
+            for (int i = 0; i < count; i++)
+            {
+                int index = BitOperations.TrailingZeroCount(combinationBit);
+                res[i] = index - 8;
+
+                if (res[i] < 0)
+                {
+                    throw new Exception();
+                }
+                combinationBit ^= 1UL << index;
+            }
+
+            return res;
+        }
+
         public override string ToString()
         {
             var board = BitBoardToArray2D(this);
