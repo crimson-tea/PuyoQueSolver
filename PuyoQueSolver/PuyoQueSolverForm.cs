@@ -38,7 +38,6 @@ namespace PuyoQueSolver
             var bitBoard = new PuyoQueBitBoard();
             bitBoard.SetBoard(board);
             var (combinationBit, combo, delCount) = _solver.SolveBitBoard(bitBoard, _rule, (int)RouteLengthNumericUpDown.Value, Mode.Normal);
-            combinationBit = 0;
             stopwatch.Stop();
 
             ElapsedTextBox.Text = stopwatch.Elapsed.ToString();
