@@ -29,12 +29,12 @@ namespace PuyoQueSolver
             var path = SearchPath();
             if (path is null)
             {
-                throw new FileNotFoundException("ulong_comb_1-X.msgpack をリポジトリのReleaseからダウンロードしてこのアプリケーションの実行ファイルと同じ場所に入れてください。");
+                throw new FileNotFoundException("patterns_1-x.msgpack をリポジトリのReleaseからダウンロードしてこのアプリケーションの実行ファイルと同じ場所に入れてください。");
             }
 
             string? SearchPath()
             {
-                return Enumerable.Range(5, 5).Reverse().Select(x => string.Format(pathFormat, x)).FirstOrDefault(x => File.Exists(x));
+                return Enumerable.Range(5, 10).Reverse().Select(x => string.Format(pathFormat, x)).FirstOrDefault(x => File.Exists(x));
             }
 
             var bytes = File.ReadAllBytes(path);
