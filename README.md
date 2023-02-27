@@ -15,7 +15,42 @@
 ## システム要件
 * Windows 10 64ビット 以上
 * .NET 6.0 以上
-* AVX2 の利用が可能なCPU
+* AVX2 の利用が可能な CPU
+
+## 使用言語、フレームワーク
+* C# + WinForms
+
+## 使い方
+### 事前準備
+#### githubのサイトを利用する方法
+[このリポジトリ](https://github.com/crimson-tea/PuyoQueSolver)のコードをCode -> DownloadZipでダウンロードします。
+
+ダウンロードしたファイルを展開します。
+
+#### gitを利用する方法
+以下のコマンドを実行します。
+```
+git clone https://github.com/crimson-tea/PuyoQueSolver.git
+```
+
+### Visual Studio 2022を利用して起動（簡単！）
+`PuyoQueSolver.sln`ファイルを VisualStudio で開いてください。  
+上部[ソリューション構成]リストボックスから Release を選択します。  
+`Ctrl` + `F5`キーでアプリケーションが起動します。  
+
+### コマンドを利用して起動
+`PuyoQueSolver.csproj`が存在するディレクトリへ移動し、
+```
+dotnet run --project .\PuyoQueSolver\PuyoQueSolver\PuyoQueSolver.csproj --configuration Release
+```
+を実行してください。
+
+起動後にエラーが表示されるので、exe ファイルのあるディレクトリに Releases からダウンロードした`patterns_1-x.msgpack`を置き、再度起動してください。
+
+dotnet コマンドが利用できない方は[こちらのインストール方法](https://learn.microsoft.com/ja-jp/dotnet/core/install/windows?tabs=net70)をご確認ください。
+
+デフォルトでは長さ5までの探索が有効です。  
+Releases よりダウンロードすることで最大長さ10まで対応します。
 
 ## 工夫
 1. 盤面をビットボードで表現しました。
