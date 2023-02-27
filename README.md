@@ -9,8 +9,8 @@
 これくらいならば全探索できますね。  
 では、もっと長くなったときはどうなるでしょうか。  
 より長いながさを現実的な時間で計算ができるようにビットボードでの高速化に挑戦しました。  
-結果、素朴な int[][] での実装と比べ4-5倍ほどの高速化を達成しました。
-これは、長さを1長くしても同等の時間で計算ができることを意味します。
+結果、素朴な int[][] での実装と比べ4-5倍ほどの高速化を達成し、長さ9までを0.5秒程度で計算することができました。(CPU: i7-12700 環境)  
+※4-5倍程度の高速化は、長さを1長くしてもほぼ同等の計算時間であることを意味します。
 
 ## システム要件
 * Windows 10 64ビット 以上
@@ -18,7 +18,7 @@
 * AVX2 の利用が可能な CPU
 
 ## 使用言語、フレームワーク
-* C# + WinForms
+* C# .NET 6.0 + WinForms
 
 ## 使い方
 ### 事前準備
@@ -41,7 +41,11 @@ git clone https://github.com/crimson-tea/PuyoQueSolver.git
 ### コマンドを利用して起動
 `PuyoQueSolver.csproj`が存在するディレクトリへ移動し、
 ```
-dotnet run --project .\PuyoQueSolver\PuyoQueSolver\PuyoQueSolver.csproj --configuration Release
+cd .\PuyoQueSolver\PuyoQueSolver\
+```
+Release ビルドコマンド
+```
+dotnet run --configuration Release
 ```
 を実行してください。
 
