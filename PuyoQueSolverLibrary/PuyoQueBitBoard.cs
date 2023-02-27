@@ -172,8 +172,6 @@ namespace PuyoQueSolver
 
                 mask &= 0b_11111111__11111111__11111111__11111111__11111111__11111111__11111111__00000000UL;
 
-                Debug.WriteLine($"i={i} {Convert.ToString((long)mask, 2).PadLeft(64, '0')}");
-
                 operableMasks[i] = mask;
             }
 
@@ -390,8 +388,6 @@ namespace PuyoQueSolver
                     }
 
                     count -= deleted;
-                    // Debug.WriteLine(bitBoard.ToString());
-                    // Debug.WriteLine(Convert.ToString((long)board[b], 2).PadLeft(64, '0'));
                 }
 
                 board[b] |= restore;
@@ -451,8 +447,6 @@ namespace PuyoQueSolver
             oneColorBoard ^= posBit;
             ulong connect = oneColorBoard & _operableMasks[pos];
 
-            //Debug.WriteLine(Convert.ToString((long)connect, 2));
-            //Debug.WriteLine(Convert.ToString((long)_operableMasks[pos], 2));
             while (connect != 0)
             {
                 int shift = BitOperations.TrailingZeroCount(connect);
@@ -511,7 +505,6 @@ namespace PuyoQueSolver
                 var deleted = PuyoQueSolver.RemoveConnect(bitBoard, rule);
                 if (deleted is false)
                 {
-                    // DebugOutputBitBoard(bitBoard);
                     return BitBoardToArray2D(bitBoard);
                 }
 
@@ -527,16 +520,6 @@ namespace PuyoQueSolver
                 }
 
                 bitBoard.SetBoard(additional);
-            }
-
-            static void DebugOutputBitBoard(PuyoQueBitBoard bitBoard)
-            {
-                Debug.WriteLine(bitBoard.ToString());
-
-                foreach (var color in bitBoard.Board)
-                {
-                    Debug.WriteLine(Convert.ToString((long)color, 2).PadLeft(56));
-                }
             }
 
             return null;
