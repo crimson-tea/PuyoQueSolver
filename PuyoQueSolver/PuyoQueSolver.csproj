@@ -31,4 +31,10 @@
     <ProjectReference Include="..\PuyoQueSolverLibrary\PuyoQueSolverLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="patterns_1-5.msgpack">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
