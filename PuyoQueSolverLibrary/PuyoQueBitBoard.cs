@@ -36,7 +36,6 @@ namespace PuyoQueSolver
         private static readonly ulong[] _colOperableMasks = new ulong[_width];
         private static readonly ulong[] _colAllMasks = new ulong[_width];
 
-        private static readonly int _operaleHeight = 6;
         private static readonly int _height = 7;
 
         // 操作可能範囲内でつながっているかを判定するためのmask
