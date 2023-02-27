@@ -40,9 +40,6 @@ namespace PuyoQueSolver
             var bytes = File.ReadAllBytes(path);
             var combinationsUInt64 = MessagePackSerializer.Deserialize<ulong[]>(bytes);
 
-            // TODO: この変換を済ませた.msgpackを用意する。
-            combinationsUInt64 = combinationsUInt64.Select(x => x << 8).ToArray();
-
             return combinationsUInt64;
         }
 
