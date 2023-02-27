@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuyoQueSolver.Benchmark", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuyoQueSolverLibrary", "PuyoQueSolverLibrary\PuyoQueSolverLibrary.csproj", "{81B478EF-8F14-46FE-B670-39F9A4D20CD1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VerticalBitBoard", "BitBoard2\VerticalBitBoard.csproj", "{8E407077-1B20-4F11-8404-6167D6AD7074}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VerticalBitBoard", "VerticalBitBoard\VerticalBitBoard.csproj", "{8E407077-1B20-4F11-8404-6167D6AD7074}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VBitBoardTests", "BitBoard2Tests\VBitBoardTests.csproj", "{62446F88-6629-4311-9FAE-1BFD77B13E08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VBitBoardTests", "VBitBoardTests\VBitBoardTests.csproj", "{62446F88-6629-4311-9FAE-1BFD77B13E08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
