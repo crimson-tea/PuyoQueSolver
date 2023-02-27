@@ -8,21 +8,13 @@ using System.Text;
 
 namespace PuyoQueSolver
 {
-    // TODO: structにしてパフォーマンス比較。
     public class PuyoQueBitBoard
     {
         private readonly static byte _width = 8;
 
         public ulong[] Board = new ulong[8];
 
-        public ulong MergeBoard
-        {
-            get
-            {
-                ulong merge = Board[0] | Board[1] | Board[2] | Board[3] | Board[4] | Board[5] | Board[6];
-                return merge;
-            }
-        }
+        public ulong MergeBoard => Board[0] | Board[1] | Board[2] | Board[3] | Board[4] | Board[5] | Board[6];
 
         public void SetBoard(int[][] board)
         {
