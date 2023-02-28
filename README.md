@@ -61,7 +61,7 @@ dotnet コマンドが利用できない方は[こちらのインストール方
 
 ### UIの説明
 
-![PuyoQueSolver説明](https://user-images.githubusercontent.com/91731135/221899121-04edf3bf-961c-4e24-9620-ab198c3cbb2c.png)
+![PuyoQueSolver説明](https://user-images.githubusercontent.com/91731135/221903484-da699914-2f36-4206-b303-ca3b01a41130.png)
 
 ## 工夫
 1. 盤面をビットボードで表現しました。
