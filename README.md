@@ -59,8 +59,9 @@ dotnet コマンドが利用できない方は[こちらのインストール方
 デフォルトでは長さ5までの探索が有効です。  
 [こちら](https://github.com/crimson-tea/PuyoQueSolver/releases/tag/pattens) よりダウンロードすることで最大長さ10まで対応します。
 
-### 操作方法
-TODO
+### UIの説明
+
+![PuyoQueSolver説明](https://user-images.githubusercontent.com/91731135/221899121-04edf3bf-961c-4e24-9620-ab198c3cbb2c.png)
 
 ## 工夫
 1. 盤面をビットボードで表現しました。
