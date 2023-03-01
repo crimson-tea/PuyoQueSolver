@@ -1,8 +1,11 @@
 # PuyoQueSolver
-最大れんさを高速に計算するアプリケーションです。
+最大れんさを達成するなぞり方を高速に求めるアプリケーションです。
 
-## デモ動画
-アップロード予定  
+## デモンストレーション動画
+
+
+https://user-images.githubusercontent.com/91731135/221626583-69e9b826-f8fa-4fbc-8d47-0ad99944d863.mp4
+
 
 ## PuyoQueSolver について
 なぞる長さ(以下長さ)が5の場合、11924通りしかありません。  
@@ -54,7 +57,11 @@ dotnet run --configuration Release
 dotnet コマンドが利用できない方は[こちらのインストール方法](https://learn.microsoft.com/ja-jp/dotnet/core/install/windows?tabs=net70)をご確認ください。
 
 デフォルトでは長さ5までの探索が有効です。  
-Releases よりダウンロードすることで最大長さ10まで対応します。
+[こちら](https://github.com/crimson-tea/PuyoQueSolver/releases/tag/pattens) よりダウンロードすることで最大長さ10まで対応します。
+
+### UIの説明
+
+![PuyoQueSolver説明](https://user-images.githubusercontent.com/91731135/221903484-da699914-2f36-4206-b303-ca3b01a41130.png)
 
 ## 工夫
 1. 盤面をビットボードで表現しました。
