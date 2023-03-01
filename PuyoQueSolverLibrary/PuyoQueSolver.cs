@@ -12,13 +12,13 @@ namespace PuyoQueSolver
         public PuyoQueSolver()
         {
             _combinationsUInt64 = InitCombinations();
-            CalculatedLength = InitCalculatedLength();
+            MaxCombinationLength = InitMaxCombinationLength();
 
-            int InitCalculatedLength() => BitOperations.PopCount(_combinationsUInt64.Last());
+            int InitMaxCombinationLength() => BitOperations.PopCount(_combinationsUInt64.Last());
         }
 
 
-        public int CalculatedLength { get; init; }
+        public int MaxCombinationLength { get; init; }
 
         private readonly ulong[] _combinationsUInt64;
 
