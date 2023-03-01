@@ -19,6 +19,7 @@ namespace PuyoQueSolver
         private void Form1_Load(object sender, EventArgs e)
         {
             _solver = new PuyoQueSolver();
+            RouteLengthNumericUpDown.Maximum = _solver.CalculatedLength;
         }
 
         /// <summary>

@@ -12,15 +12,18 @@ namespace PuyoQueSolver
         public PuyoQueSolver()
         {
             _combinationsUInt64 = InitCombinations();
+            CalculatedLength = InitCalculatedLength();
+
+            int InitCalculatedLength() => BitOperations.PopCount(_combinationsUInt64.Last());
         }
+
+
+        public int CalculatedLength { get; init; }
 
         private readonly ulong[] _combinationsUInt64;
 
         /// <summary>
-        /// なぞる組み合わせの数
-        /// 1-8:  1438335
-        /// 1-9:  6300691
-        /// 1-10: 26702013
+        /// なぞり方を読み込みます
         /// </summary>
         private static ulong[] InitCombinations()
         {
